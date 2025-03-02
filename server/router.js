@@ -4,7 +4,7 @@ const { getProducts, addProducts, loginUser, registerUser } = require('./control
 
 const router = Router();
 
-router.post('/register', [  
+router.post('/register', [
     body("name").isString().trim().notEmpty().withMessage('Name is required'),
     body("email").isEmail().normalizeEmail().withMessage('Email must be valid'),
     body("password").isString().isLength({ min: 8 }).withMessage('Password must be at least 8 characters'),
@@ -18,7 +18,8 @@ router.post('/login', [
 router.get('/products', [
     query('page').optional().isInt({ min: 1 }).withMessage('Page must be a positive integer'),
     query('limit').optional().isInt({ min: 1 }).withMessage('Limit must be a positive integer'),
-    query('category').optional().isString().trim().notEmpty().withMessage('Category must be a valid string'),
+    query('category').optional().isString().trim().withMessage('Category must be a valid string'),
+    query('query').optional().isString().withMessage('Search query must be a string'),
 ], getProducts);
 
 router.post('/products', [
@@ -26,6 +27,7 @@ router.post('/products', [
     body('description').isString().trim().notEmpty().withMessage('Product description is required'),
     body('price').isNumeric().withMessage('Price must be a number').custom(value => value > 0).withMessage('Price must be greater than 0'),
     body('category').isString().trim().notEmpty().withMessage('Product category is required'),
+    body('image').isString().trim().notEmpty().withMessage('Product image is required'),
 ], addProducts);
 
 router.get('/', function (req, res) {
