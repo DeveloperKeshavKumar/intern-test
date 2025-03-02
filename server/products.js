@@ -12,6 +12,7 @@ const products = [
         name: 'iPhone 16',
         description: 'The latest iPhone',
         price: 1000,
+        image: '',
         category: 'electronics'
     },
     {
@@ -19,6 +20,7 @@ const products = [
         name: 'Samsung Galaxy 10',
         description: 'The latest Samsung',
         price: 900,
+        image: '',
         category: 'electronics'
     },
     {
@@ -26,6 +28,7 @@ const products = [
         name: 'Google Pixel 4',
         description: 'The latest Google Pixel',
         price: 800,
+        image: '',
         category: 'electronics'
     },
     {
@@ -33,6 +36,7 @@ const products = [
         name: 'OnePlus 7T',
         description: 'The latest OnePlus',
         price: 700,
+        image: '',
         category: 'electronics'
     },
     {
@@ -40,6 +44,7 @@ const products = [
         name: 'T-Shirt',
         description: 'A comfortable cotton t-shirt',
         price: 20,
+        image: '',
         category: 'clothes'
     },
     {
@@ -47,6 +52,7 @@ const products = [
         name: 'Jeans',
         description: 'Stylish blue jeans',
         price: 50,
+        image: '',
         category: 'clothes'
     },
     {
@@ -54,6 +60,7 @@ const products = [
         name: 'Laptop',
         description: 'A powerful laptop for work and play',
         price: 1200,
+        image: '',
         category: 'electronics'
     },
     {
@@ -61,6 +68,7 @@ const products = [
         name: 'Headphones',
         description: 'Noise-cancelling over-ear headphones',
         price: 200,
+        image: '',
         category: 'electronics'
     },
     {
@@ -68,6 +76,7 @@ const products = [
         name: 'Action Figure',
         description: 'A popular superhero action figure',
         price: 25,
+        image: '',
         category: 'toys'
     },
     {
@@ -75,6 +84,7 @@ const products = [
         name: 'Board Game',
         description: 'A fun and engaging board game for all ages',
         price: 30,
+        image: '',
         category: 'toys'
     },
     {
@@ -82,6 +92,7 @@ const products = [
         name: 'Smartwatch',
         description: 'A smartwatch with various health tracking features',
         price: 250,
+        image: '',
         category: 'electronics'
     },
     {
@@ -89,6 +100,7 @@ const products = [
         name: 'Tablet',
         description: 'A high-resolution tablet for work and entertainment',
         price: 600,
+        image: '',
         category: 'electronics'
     },
     {
@@ -96,6 +108,7 @@ const products = [
         name: 'Bluetooth Speaker',
         description: 'A portable Bluetooth speaker with excellent sound quality',
         price: 100,
+        image: '',
         category: 'electronics'
     },
     {
@@ -103,6 +116,7 @@ const products = [
         name: 'Camera',
         description: 'A digital camera with high resolution and zoom capabilities',
         price: 800,
+        image: '',
         category: 'electronics'
     },
     {
@@ -110,6 +124,7 @@ const products = [
         name: 'Sneakers',
         description: 'Comfortable and stylish sneakers for everyday wear',
         price: 70,
+        image: '',
         category: 'clothes'
     },
     {
@@ -117,6 +132,7 @@ const products = [
         name: 'Jacket',
         description: 'A warm and fashionable jacket for winter',
         price: 120,
+        image: '',
         category: 'clothes'
     },
     {
@@ -124,6 +140,7 @@ const products = [
         name: 'Dress',
         description: 'A beautiful dress for special occasions',
         price: 90,
+        image: '',
         category: 'clothes'
     },
     {
@@ -131,6 +148,7 @@ const products = [
         name: 'Hat',
         description: 'A stylish hat for sunny days',
         price: 25,
+        image: '',
         category: 'clothes'
     },
     {
@@ -138,6 +156,7 @@ const products = [
         name: 'Toy Car',
         description: 'A remote-controlled toy car',
         price: 40,
+        image: '',
         category: 'toys'
     },
     {
@@ -145,6 +164,7 @@ const products = [
         name: 'Doll',
         description: 'A beautiful doll with accessories',
         price: 35,
+        image: '',
         category: 'toys'
     },
     {
@@ -152,6 +172,7 @@ const products = [
         name: 'Puzzle',
         description: 'A challenging and fun puzzle for all ages',
         price: 15,
+        image: '',
         category: 'toys'
     },
     {
@@ -159,6 +180,7 @@ const products = [
         name: 'Building Blocks',
         description: 'A set of building blocks for creative play',
         price: 45,
+        image: '',
         category: 'toys'
     },
     {
@@ -166,6 +188,7 @@ const products = [
         name: 'Smart TV',
         description: 'A smart TV with 4K resolution and streaming capabilities',
         price: 1500,
+        image: '',
         category: 'electronics'
     },
     {
@@ -173,6 +196,7 @@ const products = [
         name: 'Gaming Console',
         description: 'A popular gaming console with multiple games',
         price: 500,
+        image: '',
         category: 'electronics'
     },
     {
@@ -180,6 +204,7 @@ const products = [
         name: 'Fitness Tracker',
         description: 'A fitness tracker to monitor your daily activities',
         price: 100,
+        image: '',
         category: 'electronics'
     },
     {
@@ -187,6 +212,7 @@ const products = [
         name: 'Microwave Oven',
         description: 'A microwave oven with multiple cooking functions',
         price: 150,
+        image: '',
         category: 'electronics'
     },
     {
@@ -194,6 +220,7 @@ const products = [
         name: 'Blender',
         description: 'A powerful blender for smoothies and shakes',
         price: 80,
+        image: '',
         category: 'electronics'
     },
     {
@@ -201,6 +228,7 @@ const products = [
         name: 'Coffee Maker',
         description: 'A coffee maker for brewing fresh coffee',
         price: 60,
+        image: '',
         category: 'electronics'
     },
     {
@@ -208,6 +236,7 @@ const products = [
         name: 'Vacuum Cleaner',
         description: 'A vacuum cleaner with strong suction power',
         price: 200,
+        image: '',
         category: 'electronics'
     },
     {
@@ -215,6 +244,7 @@ const products = [
         name: 'Air Purifier',
         description: 'An air purifier to keep your home air clean',
         price: 300,
+        image: '',
         category: 'electronics'
     },
     {
@@ -222,6 +252,7 @@ const products = [
         name: 'Washing Machine',
         description: 'A washing machine with multiple wash programs',
         price: 700,
+        image: '',
         category: 'electronics'
     },
     {
@@ -229,6 +260,7 @@ const products = [
         name: 'Refrigerator',
         description: 'A refrigerator with large storage capacity',
         price: 1200,
+        image: '',
         category: 'electronics'
     },
     {
@@ -236,6 +268,7 @@ const products = [
         name: 'Oven',
         description: 'A convection oven for baking and roasting',
         price: 400,
+        image: '',
         category: 'electronics'
     },
     {
@@ -243,6 +276,7 @@ const products = [
         name: 'Dishwasher',
         description: 'A dishwasher with multiple wash cycles',
         price: 600,
+        image: '',
         category: 'electronics'
     },
     {
@@ -250,6 +284,7 @@ const products = [
         name: 'Air Conditioner',
         description: 'An air conditioner to keep your home cool',
         price: 1000,
+        image: '',
         category: 'electronics'
     },
     {
@@ -257,6 +292,7 @@ const products = [
         name: 'Heater',
         description: 'A heater to keep your home warm',
         price: 150,
+        image: '',
         category: 'electronics'
     },
     {
@@ -264,6 +300,7 @@ const products = [
         name: 'Fan',
         description: 'A ceiling fan with remote control',
         price: 100,
+        image: '',
         category: 'electronics'
     },
     {
@@ -271,6 +308,7 @@ const products = [
         name: 'Iron',
         description: 'A steam iron for wrinkle-free clothes',
         price: 50,
+        image: '',
         category: 'electronics'
     },
     {
@@ -278,6 +316,7 @@ const products = [
         name: 'Hair Dryer',
         description: 'A hair dryer with multiple heat settings',
         price: 40,
+        image: '',
         category: 'electronics'
     },
     {
@@ -285,6 +324,7 @@ const products = [
         name: 'Electric Kettle',
         description: 'An electric kettle for boiling water',
         price: 30,
+        image: '',
         category: 'electronics'
     },
     {
@@ -292,6 +332,7 @@ const products = [
         name: 'Rice Cooker',
         description: 'A rice cooker with multiple cooking functions',
         price: 70,
+        image: '',
         category: 'electronics'
     },
     {
@@ -299,6 +340,7 @@ const products = [
         name: 'Toaster',
         description: 'A toaster with multiple browning settings',
         price: 25,
+        image: '',
         category: 'electronics'
     },
     {
@@ -306,6 +348,7 @@ const products = [
         name: 'Mixer',
         description: 'A stand mixer for baking and cooking',
         price: 150,
+        image: '',
         category: 'electronics'
     },
     {
@@ -313,6 +356,7 @@ const products = [
         name: 'Grill',
         description: 'An electric grill for indoor grilling',
         price: 100,
+        image: '',
         category: 'electronics'
     },
     {
@@ -320,6 +364,7 @@ const products = [
         name: 'Slow Cooker',
         description: 'A slow cooker for easy meal preparation',
         price: 60,
+        image: '',
         category: 'electronics'
     },
     {
@@ -327,6 +372,7 @@ const products = [
         name: 'Pressure Cooker',
         description: 'A pressure cooker for fast cooking',
         price: 80,
+        image: '',
         category: 'electronics'
     },
     {
@@ -334,6 +380,7 @@ const products = [
         name: 'Deep Fryer',
         description: 'A deep fryer for crispy fried foods',
         price: 70,
+        image: '',
         category: 'electronics'
     },
     {
@@ -341,6 +388,7 @@ const products = [
         name: 'Bread Maker',
         description: 'A bread maker for fresh homemade bread',
         price: 100,
+        image: '',
         category: 'electronics'
     },
     {
@@ -348,6 +396,7 @@ const products = [
         name: 'Juicer',
         description: 'A juicer for fresh fruit and vegetable juices',
         price: 90,
+        image: '',
         category: 'electronics'
     },
     {
@@ -355,6 +404,7 @@ const products = [
         name: 'Food Processor',
         description: 'A food processor for chopping and slicing',
         price: 120,
+        image: '',
         category: 'electronics'
     }
 ];
