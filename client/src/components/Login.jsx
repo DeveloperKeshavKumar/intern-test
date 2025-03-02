@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
@@ -21,19 +22,19 @@ export default function Login() {
         }
 
         try {
-            const response = await axios.post('https://api.example.com/login', { email, password });
+            const response = await axios.post('http://localhost:3000/api/v1/login', { email, password });
             const token = response.data.token;
 
             localStorage.setItem('authToken', token);
-
-            alert('Login successful!');
+            navigate('/products');
+            setError('');
         } catch (error) {
             setError('Invalid email or password.');
         }
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <div className="flex items-center justify-center min-h-screen bg-gray-800 text-black">
             <div className="w-full max-w-sm bg-white p-8 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-semibold text-center mb-6">Login</h2>
                 <form onSubmit={handleLogin} className="space-y-4">

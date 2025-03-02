@@ -23,7 +23,7 @@ export default function Register() {
         }
 
         try {
-            const response = await axios.post('https://api.example.com/register', { name, email, password });
+            const response = await axios.post('http://localhost:3000/api/v1/register', { name, email, password });
 
             setSuccessMessage('Registration successful! You can now log in.');
             setError('');
@@ -34,7 +34,7 @@ export default function Register() {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <div className="flex items-center justify-center min-h-screen bg-gray-800 text-black">
             <div className="w-full max-w-sm bg-white p-8 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-semibold text-center mb-6">Register</h2>
 
