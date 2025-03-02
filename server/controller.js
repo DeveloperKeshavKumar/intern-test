@@ -67,23 +67,33 @@ const getProducts = async (req, res, next) => {
         return res.status(400).json({ errors: errors.array() });
     }
 
+    const { query, page = 1, limit = 10, category } = req.query;
+    const pageNumber = Math.max(1, parseInt(page, 10));
+    const limitNumber = Math.min(100, parseInt(limit, 10));
+
     try {
-        const { page = 1, limit = 10, category = '' } = req.query;
+        const filter = {};
+
+        if (category) {
+            filter.category = { $regex: category, $options: 'i' };
+        }
+
+        if (query) {
+            filter.$or = [
+                { name: { $regex: query, $options: 'i' } },
+                { description: { $regex: query, $options: 'i' } },
+                { category: { $regex: query, $options: 'i' } },
+            ];
+        }
 
         const pageNumber = Math.max(1, parseInt(page, 10));
         const limitNumber = Math.min(100, parseInt(limit, 10));
 
-        if (pageNumber < 1 || limitNumber < 1) {
-            return res.status(400).json({ message: 'Page and limit must be greater than 0' });
-        }
-
-        const query = category ? { category: { $regex: category, $options: 'i' } } : {};
-
-        const products = await Product.find(query)
+        const products = await Product.find(filter)
             .skip((pageNumber - 1) * limitNumber)
             .limit(limitNumber);
 
-        const totalProducts = await Product.countDocuments(query);
+        const totalProducts = await Product.countDocuments(filter);
         const totalPages = Math.ceil(totalProducts / limitNumber);
 
         res.status(200).json({
@@ -93,7 +103,7 @@ const getProducts = async (req, res, next) => {
                 totalPages,
                 totalProducts,
                 limit: limitNumber,
-            }
+            },
         });
     } catch (err) {
         next(err);
@@ -107,13 +117,14 @@ const addProducts = async (req, res, next) => {
         return res.status(400).json({ errors: errors.array() });
     }
     try {
-        const { name, description, price, category } = req.body;
+        const { name, description, price, category, image } = req.body;
 
         const newProduct = new Product({
             name,
             description,
             price,
             category,
+            image
         });
 
         await newProduct.save();
