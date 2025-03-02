@@ -40,11 +40,12 @@ export const CategoryFilter = ({ category, onCategoryChange }) => {
 
 export const ProductCard = ({ product, onProductClick }) => {
     return (
-        <div key={product._id} className="bg-white shadow-lg rounded-lg overflow-hidden text-black">
+        <div key={product._id} className="bg-[#e0e0e0] shadow-lg rounded-lg overflow-hidden text-black">
             <img
-                src={product.imageUrl}
+                src={product.image}
                 alt={product.name}
                 className="w-full h-48 object-cover"
+                loading='lazy'
             />
             <div className="p-4 flex justify-between">
                 <div>
